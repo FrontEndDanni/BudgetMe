@@ -41,7 +41,7 @@ export default function BudgetCard({ name, amount, max, gray, hideButtons, onAdd
             gap="2"
             className="m-4">
                 <Button 
-                variant="outline-primary"
+                variant="primary"
                 className="ms-auto"
                 onClick={onAddExpenseClick}
                 >
@@ -63,7 +63,7 @@ export default function BudgetCard({ name, amount, max, gray, hideButtons, onAdd
 //you are within your budget or not
 function getProgressBarVariant(amount,max){
     const ratio = amount/max 
-    if (ratio < .5) return "primary"
+    if (ratio < .5) return "success"
     if (ratio < .75) return "warning"
     return "danger"
 }

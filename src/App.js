@@ -23,11 +23,17 @@ function App() {
 
   return (
   <>
+<nav className="navbar navbar-dark bg-dark">
+  <div className="container-fluid">
+    <a className="navbar-brand mx-4" href="#">budgetMe</a>
+  </div>
+</nav>
+
   <Container className="my-4">
     <Stack direction="horizontal" gap="2" className="mb-4">
-      <h1 className="me-auto">budgetMe</h1>
-      <Button variant="primary" onClick={()=> setShowAddBudgetModal(true)}>Add Budget</Button>
-      <Button variant="outline-primary" onClick={openAddExpenseModal}>Add Expense</Button>
+      <h1 className="me-auto">Your Budgets</h1>
+      <Button variant="success" onClick={()=> setShowAddBudgetModal(true)}>Add Budget</Button>
+      <Button variant="outline-success" onClick={openAddExpenseModal}>Add Expense</Button>
     </Stack>
     <div style={{display:"grid", 
     gridTemplateColumns: "repeat(auto-fill,minmax(300px, 1fr))",
